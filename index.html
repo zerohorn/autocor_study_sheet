@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOCOR 350-901 — Final Exam Study Guide</title>
+<style>
+  :root {
+    --bg:#0d1117;--bg2:#161b22;--bg3:#1c2333;--border:#30363d;
+    --text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;
+    --green:#3fb950;--yellow:#d29922;--red:#f85149;--purple:#bc8cff;
+    --d1:#58a6ff;--d2:#3fb950;--d3:#d29922;--d4:#bc8cff;
+    --mono:'Courier New',Courier,monospace;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.6;}
+  .shell{display:flex;min-height:100vh;}
+  nav{width:220px;min-width:220px;background:var(--bg2);border-right:1px solid var(--border);position:sticky;top:0;height:100vh;overflow-y:auto;padding:12px 0;flex-shrink:0;}
+  .nav-domain{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:10px 14px 3px;margin-top:8px;}
+  .nav-domain.d1{color:var(--d1)}.nav-domain.d2{color:var(--d2)}.nav-domain.d3{color:var(--d3)}.nav-domain.d4{color:var(--d4)}.nav-domain.ref{color:var(--muted)}
+  nav a{display:block;padding:4px 14px;color:var(--muted);text-decoration:none;font-size:12px;border-left:2px solid transparent;transition:color .15s,border-color .15s;}
+  nav a.d1:hover{color:var(--d1);border-left-color:var(--d1);}
+  nav a.d2:hover{color:var(--d2);border-left-color:var(--d2);}
+  nav a.d3:hover{color:var(--d3);border-left-color:var(--d3);}
+  nav a.d4:hover{color:var(--d4);border-left-color:var(--d4);}
+  nav a:hover{color:var(--text);}
+  main{flex:1;padding:28px 36px;max-width:1060px;}
+  .hero{border:1px solid var(--border);border-radius:10px;background:var(--bg2);padding:22px 26px;margin-bottom:28px;}
+  .hero h1{font-size:20px;font-weight:700;color:var(--accent);margin-bottom:5px;}
+  .hero p{color:var(--muted);font-size:13px;}
+  .pills{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+  .pill{border-radius:20px;padding:3px 12px;font-size:11px;font-weight:600;border:1px solid;}
+  .pill.d1{color:var(--d1);border-color:var(--d1);background:#58a6ff15;}
+  .pill.d2{color:var(--d2);border-color:var(--d2);background:#3fb95015;}
+  .pill.d3{color:var(--d3);border-color:var(--d3);background:#d2992215;}
+  .pill.d4{color:var(--d4);border-color:var(--d4);background:#bc8cff15;}
+  .dh{border-radius:8px;padding:12px 18px;margin:32px 0 16px;display:flex;align-items:center;gap:10px;}
+  .dh.d1{background:#58a6ff10;border:1px solid #58a6ff35;}
+  .dh.d2{background:#3fb95010;border:1px solid #3fb95035;}
+  .dh.d3{background:#d2992210;border:1px solid #d2992235;}
+  .dh.d4{background:#bc8cff10;border:1px solid #bc8cff35;}
+  .dh.ref{background:#1c2333;border:1px solid #30363d;}
+  .dh h2{font-size:16px;font-weight:700;}
+  .dh.d1 h2{color:var(--d1)}.dh.d2 h2{color:var(--d2)}.dh.d3 h2{color:var(--d3)}.dh.d4 h2{color:var(--d4)}.dh.ref h2{color:var(--text)}
+  .dh .wt{margin-left:auto;font-size:13px;font-weight:700;opacity:.7;}
+  .topic{background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden;}
+  .th{padding:11px 16px;cursor:pointer;display:flex;align-items:center;gap:8px;user-select:none;border-bottom:1px solid transparent;transition:background .15s;}
+  .th:hover{background:var(--bg3);}
+  .th.open{border-bottom-color:var(--border);}
+  .tnum{font-size:10px;font-weight:700;font-family:var(--mono);opacity:.55;min-width:26px;}
+  .th h3{font-size:13.5px;font-weight:600;flex:1;}
+  .chev{font-size:9px;color:var(--muted);transition:transform .2s;}
+  .th.open .chev{transform:rotate(90deg);}
+  .tb{display:none;padding:16px 18px;}
+  .tb.open{display:block;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:14px;}
+  .box{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:11px 13px;}
+  .box h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:7px;}
+  .box ul{padding-left:15px;}.box li{font-size:12.5px;margin-bottom:2px;}
+  .box p{font-size:12.5px;}
+  .sl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:14px 0 7px;}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .tw{overflow-x:auto;margin-bottom:14px;}
+  thead th{background:var(--bg3);color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:7px 11px;text-align:left;border-bottom:1px solid var(--border);}
+  tbody tr{border-bottom:1px solid var(--border);}
+  tbody tr:last-child{border-bottom:none;}
+  tbody tr:hover{background:var(--bg3);}
+  td{padding:7px 11px;vertical-align:top;}
+  td:first-child{width:44%;}
+  td:last-child{color:#c9d1d9;}
+  code{font-family:var(--mono);font-size:11px;background:#1f2937;color:#79c0ff;padding:1px 4px;border-radius:3px;}
+  .cb{background:#0d1117;border:1px solid var(--border);border-radius:6px;padding:12px 14px;font-family:var(--mono);font-size:11.5px;color:#c9d1d9;overflow-x:auto;margin-bottom:12px;line-height:1.7;white-space:pre;}
+  .cb .cm{color:#8b949e}.cb .kw{color:#ff7b72}.cb .st{color:#a5d6ff}.cb .fn{color:#d2a8ff}.cb .nu{color:#79c0ff}
+  .callout{border-radius:6px;padding:9px 13px;margin-bottom:13px;font-size:12.5px;border-left:3px solid;}
+  .cr{background:#f8514912;border-color:var(--red);color:#ffc1c0;}
+  .cy{background:#d2992212;border-color:var(--yellow);color:#e3c87d;}
+  .cg{background:#3fb95012;border-color:var(--green);color:#8de0a0;}
+  .cb2{background:#58a6ff12;border-color:var(--accent);color:#9ecaff;}
+  .callout strong{font-weight:700;}
+  .qg{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:7px;margin-bottom:14px;}
+  .qi{background:var(--bg3);border:1px solid var(--border);border-radius:5px;padding:7px 11px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;}
+  .qi .v{color:var(--accent);font-family:var(--mono);font-weight:700;}
+  ::-webkit-scrollbar{width:5px;height:5px;}
+  ::-webkit-scrollbar-track{background:var(--bg2);}
+  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav>
+  <div class="nav-domain d1">Domain 1 — 30%</div>
+  <a href="#s11" class="d1">1.1 Ansible</a>
+  <a href="#s12" class="d1">1.2 Terraform</a>
+  <a href="#s13" class="d1">1.3 RESTCONF + YANG</a>
+  <a href="#s14" class="d1">1.4 Python</a>
+  <a href="#s15" class="d1">1.5 Approach Selection</a>
+  <a href="#s16" class="d1">1.6 REST APIs</a>
+  <div class="nav-domain d2">Domain 2 — 30%</div>
+  <a href="#s21" class="d2">2.1 Git Operations</a>
+  <a href="#s22" class="d2">2.2/2.3 GitLab CI/CD</a>
+  <a href="#s24" class="d2">2.4 CML</a>
+  <a href="#s25" class="d2">2.5 Docker Compose</a>
+  <a href="#s26" class="d2">2.6 Source of Truth</a>
+  <a href="#s27" class="d2">2.7 YAML/JSON + YANG</a>
+  <div class="nav-domain d3">Domain 3 — 20%</div>
+  <a href="#s31" class="d3">3.1 MDT</a>
+  <a href="#s32" class="d3">3.2 Logging</a>
+  <a href="#s33" class="d3">3.3 Diagnose Logs</a>
+  <a href="#s34" class="d3">3.4 pyATS</a>
+  <a href="#s35" class="d3">3.5 TLS Certs</a>
+  <a href="#s36" class="d3">3.6 Secure Coding</a>
+  <div class="nav-domain d4">Domain 4 — 20%</div>
+  <a href="#s41" class="d4">4.1 AI Code Dev</a>
+  <a href="#s42" class="d4">4.2 AI Security</a>
+  <a href="#s43" class="d4">4.3 MCP / FastMCP</a>
+  <a href="#s44" class="d4">4.4 LLM Agents</a>
+  <a href="#s45" class="d4">4.5 Evaluate AI</a>
+  <div class="nav-domain ref">Reference</div>
+  <a href="#ports">Ports &amp; Numbers</a>
+  <a href="#http">HTTP Status Codes</a>
+  <a href="#tools">Tools Quick Ref</a>
+</nav>
+<main>
+<div class="hero">
+  <h1>AUTOCOR 350-901 v2.0 — Final Exam Study Guide</h1>
+  <p>120 minutes · CCNP &amp; CCIE Automation · All 25 blueprint objectives covered</p>
+  <div class="pills">
+    <span class="pill d1">1.0 Network Automation 30%</span>
+    <span class="pill d2">2.0 Infrastructure as Code 30%</span>
+    <span class="pill d3">3.0 Operations 20%</span>
+    <span class="pill d4">4.0 AI in Automation 20%</span>
+  </div>
+</div>
+
+<!-- DOMAIN 1 -->
+<div class="dh d1"><h2>Domain 1.0 — Network Automation</h2><span class="wt" style="color:var(--d1)">30%</span></div>
+
+<!-- 1.1 -->
+<div class="topic" id="s11">
+<div class="th open" onclick="toggle(this)"><span class="tnum">1.1</span><h3>Ansible for Network Configuration</h3><span class="chev">▶</span></div>
+<div class="tb open">
+<div class="grid">
+<div class="box"><h4>Core Model</h4><ul>
+<li><strong>Agentless</strong> — SSH push, nothing on device</li>
+<li><strong>Idempotent</strong> — safe to run many times</li>
+<li>YAML playbooks describe desired state</li>
+<li><code>gather_facts: false</code> — required for network devices</li>
+<li>Connection type: <code>network_cli</code></li>
+</ul></div>
+<div class="box"><h4>State Options — Know Cold</h4><ul>
+<li><code>merged</code> — ADD without removing ✅ safe</li>
+<li><code>replaced</code> — replace specified resources only</li>
+<li><code>overridden</code> — replace ALL ⚠️ destructive</li>
+<li><code>deleted</code> — remove specified config</li>
+<li><code>gathered</code> — READ only, no changes</li>
+<li><code>rendered</code> — show config without applying</li>
+</ul></div>
+<div class="box"><h4>Key Modules</h4><ul>
+<li><code>ios_vlans</code> — VLAN config</li>
+<li><code>ios_interfaces</code> — interface settings</li>
+<li><code>ios_l2_interfaces</code> — trunk/access</li>
+<li><code>ios_l3_interfaces</code> — IP addresses</li>
+<li><code>ios_ospfv2</code> — OSPF</li>
+<li><code>ios_acls</code> — ACL rules</li>
+<li><code>ios_acl_interfaces</code> — apply ACL to interface</li>
+<li><code>ios_facts</code> — asset management</li>
+<li><code>ios_config</code> — raw config + backup</li>
+</ul></div>
+<div class="box"><h4>Secrets + Handlers</h4><ul>
+<li><code>ansible-vault create vault.yaml</code></li>
+<li><code>ansible-vault edit vault.yaml</code></li>
+<li>Reference: <code>"{{ vault_device_password }}"</code></li>
+<li>Run: <code>--vault-password-file ~/.vault_pass</code></li>
+<li><strong>Handler:</strong> runs ONCE even if notified many times, only when task = changed</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Add VLANs without removing others</td><td><code>state: merged</code></td></tr>
+<tr><td>Remove ALL VLANs not in playbook</td><td><code>state: overridden</code> ⚠️ destructive</td></tr>
+<tr><td>Read current VLAN state, no changes</td><td><code>state: gathered</code></td></tr>
+<tr><td>Apply ACL inbound on interface</td><td><code>ios_acl_interfaces</code> — <code>direction: in</code></td></tr>
+<tr><td>Backup config before changes</td><td><code>ios_config: backup: true</code></td></tr>
+<tr><td>Task output needed in next task</td><td><code>register: my_var</code> then <code>my_var.stdout</code></td></tr>
+<tr><td>Encrypt credentials in playbook</td><td><code>ansible-vault</code> — <code>group_vars/all/vault.yaml</code></td></tr>
+<tr><td><code>gather_facts: false</code> — why?</td><td>Network devices need <code>network_cli</code> connection, not SSH facts gathering</td></tr>
+<tr><td>Handler vs Task difference?</td><td>Handler only runs when notified, runs ONCE even if notified many times</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 1.2 -->
+<div class="topic" id="s12">
+<div class="th" onclick="toggle(this)"><span class="tnum">1.2</span><h3>Terraform for Network Configuration</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Workflow</h4><ul>
+<li><code>terraform init</code> — download providers (always first)</li>
+<li><code>terraform validate</code> — syntax check (no connection)</li>
+<li><code>terraform plan</code> — preview: <span style="color:var(--green)">+</span>add <span style="color:var(--yellow)">~</span>change <span style="color:var(--red)">-</span>destroy</li>
+<li><code>terraform apply</code> — execute changes</li>
+<li><code>terraform apply -auto-approve</code> — skip prompt (CI/CD)</li>
+<li><code>terraform destroy</code> — remove everything ⚠️</li>
+</ul></div>
+<div class="box"><h4>State File Rules</h4><ul>
+<li>Tracks everything Terraform manages (JSON)</li>
+<li>Never edit <code>terraform.tfstate</code> manually</li>
+<li>Never delete carelessly</li>
+<li>Remote backend for teams (S3 + DynamoDB lock)</li>
+<li>State locking prevents concurrent applies</li>
+<li>Drift = state ≠ live device → <code>plan</code> shows fix</li>
+<li><code>terraform import</code> if state is lost</li>
+</ul></div>
+<div class="box"><h4>HCL Key Concepts</h4><ul>
+<li><code>resource</code> — manages infrastructure state</li>
+<li><code>data</code> — reads existing (no manage)</li>
+<li><code>variable</code> + <code>sensitive = true</code> — hides from logs</li>
+<li><code>for_each</code> / <code>count</code> — multiple resources</li>
+<li><code>depends_on = [res.name]</code> — explicit dependency</li>
+<li><code>TF_VAR_name</code> env var → sets variable</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Someone manually changed config — how Terraform detects it?</td><td><code>terraform plan</code> shows drift (compares state vs live device)</td></tr>
+<tr><td><code>terraform plan</code> shows <span style="color:var(--green)">+</span> / <span style="color:var(--yellow)">~</span> / <span style="color:var(--red)">-</span></td><td>ADD / MODIFY / DESTROY</td></tr>
+<tr><td>Multiple engineers run apply at once</td><td>Remote backend + state lock prevents concurrent applies</td></tr>
+<tr><td>First command in new project</td><td><code>terraform init</code></td></tr>
+<tr><td>Check HCL syntax without connecting</td><td><code>terraform validate</code></td></tr>
+<tr><td>State file deleted accidentally</td><td><code>terraform import</code> to re-import existing resources</td></tr>
+<tr><td>Never do this to state file</td><td>Manually edit it or delete it carelessly</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 1.3 -->
+<div class="topic" id="s13">
+<div class="th" onclick="toggle(this)"><span class="tnum">1.3</span><h3>RESTCONF (RFC 8040) + YANG</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>URL Pattern</h4>
+<p style="font-family:var(--mono);font-size:11px;color:#79c0ff;margin-bottom:8px">https://device/restconf/data/<br>module:container/list=key</p>
+<ul><li>Always <strong>HTTPS</strong> port 443</li>
+<li>Module prefix on top-level key required</li>
+<li>Example: <code>Cisco-IOS-XE-vlan:vlans/vlan=100</code></li>
+<li>IETF: <code>ietf-interfaces:interfaces</code></li>
+</ul></div>
+<div class="box"><h4>HTTP Methods</h4><ul>
+<li><code>GET</code> — read → 200</li>
+<li><code>POST</code> — create new → 201 (409 if exists)</li>
+<li><code>PUT</code> — full replace (wipes omitted fields)</li>
+<li><code>PATCH</code> — partial update (keeps other fields)</li>
+<li><code>DELETE</code> — remove → 204</li>
+</ul></div>
+<div class="box"><h4>Required Headers</h4><ul>
+<li><code>Accept: application/yang-data+json</code></li>
+<li><code>Content-Type: application/yang-data+json</code></li>
+<li>Auth: HTTPBasicAuth (base64 user:pass)</li>
+</ul>
+<h4 style="margin-top:10px">pyang Symbols</h4><ul>
+<li><code>+--rw</code> — read-write → include in payload</li>
+<li><code>+--ro</code> — read-only → NEVER in config payload</li>
+<li><code>*</code> — list → JSON array</li>
+<li><code>?</code> — optional, can omit</li>
+</ul></div>
+</div>
+<div class="callout cb2"><strong>YANG Data Stores:</strong> running (active) · candidate (staging → commit) · startup (survives reboot)</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Create VLAN that doesn't exist</td><td>POST → 201 Created on success</td></tr>
+<tr><td>Update VLAN name, keep other fields</td><td>PATCH (not PUT — PUT wipes other fields)</td></tr>
+<tr><td>Got 409 Conflict on POST</td><td>Resource already exists — use PUT to replace</td></tr>
+<tr><td>Got 404 on GET</td><td>Wrong URL / module name — check YANG module prefix</td></tr>
+<tr><td>URL for interface GigabitEthernet1</td><td><code>/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet1</code></td></tr>
+<tr><td>Read YANG model as tree</td><td><code>pyang -f tree module.yang</code></td></tr>
+<tr><td><code>ro</code> leaf — include in POST payload?</td><td>NEVER — read-only state data only</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 1.4 -->
+<div class="topic" id="s14">
+<div class="th" onclick="toggle(this)"><span class="tnum">1.4</span><h3>Python for Network Configuration</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Library Selection</h4><ul>
+<li><strong>netmiko</strong> — SSH/CLI, any device, port 22</li>
+<li><strong>ncclient</strong> — NETCONF, XML, port 830</li>
+<li><strong>requests</strong> — RESTCONF/REST APIs, HTTPS 443</li>
+<li><strong>genie</strong> — parse CLI → structured dict</li>
+</ul></div>
+<div class="box"><h4>Netmiko Key Methods</h4><ul>
+<li><code>ConnectHandler(**device)</code> — connect</li>
+<li>Use <code>with ConnectHandler() as conn:</code> (best practice)</li>
+<li><code>conn.enable()</code> — enter enable mode (uses <code>secret</code>)</li>
+<li><code>conn.send_command('show ...')</code> — show cmds</li>
+<li><code>conn.send_config_set([...])</code> — config cmds</li>
+<li><code>conn.save_config()</code> — write memory</li>
+</ul></div>
+<div class="box"><h4>ncclient Flow</h4><ul>
+<li><code>manager.connect(host, port=830)</code></li>
+<li><code>conn.get_config(source="running")</code></li>
+<li><code>conn.edit_config(target, config_xml)</code></li>
+<li>Safe: lock → edit candidate → validate → commit → unlock</li>
+<li><code>conn.discard_changes()</code> on failure</li>
+</ul></div>
+<div class="box"><h4>Device Types (netmiko)</h4><ul>
+<li><code>cisco_ios</code> — IOS + IOS XE</li>
+<li><code>cisco_nxos</code> — NX-OS</li>
+<li><code>cisco_iosxr</code> — IOS XR</li>
+<li><code>cisco_asa</code> — ASA</li>
+<li><code>arista_eos</code> — Arista</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>SSH to device and configure VLANs</td><td>netmiko — <code>ConnectHandler</code> + <code>send_config_set()</code></td></tr>
+<tr><td>Parse "show vlan" into dict</td><td><code>genie device.parse('show vlan')</code></td></tr>
+<tr><td>NETCONF candidate datastore flow</td><td><code>edit_config(candidate)</code> → <code>validate</code> → <code>commit</code></td></tr>
+<tr><td><code>send_command</code> vs <code>send_config_set</code></td><td>send_command = show cmds · send_config_set = config cmds</td></tr>
+<tr><td>Auth failed in script</td><td><code>NetmikoAuthenticationException</code> — check env vars</td></tr>
+<tr><td>Timeout connecting</td><td><code>NetmikoTimeoutException</code> — check IP, SSH enabled</td></tr>
+<tr><td>NETCONF port number</td><td><strong>830</strong></td></tr>
+<tr><td>What does <code>conn.enable()</code> do?</td><td>Enters enable mode using <code>secret</code> password</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 1.5 -->
+<div class="topic" id="s15">
+<div class="th" onclick="toggle(this)"><span class="tnum">1.5</span><h3>Selecting the Right Automation Approach</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>IaC Frameworks</h4><p>Ansible / Terraform / RESTCONF</p><ul>
+<li>Repeatable, Git-tracked, CI/CD-native</li><li>Engineers who can write YAML/HCL</li>
+<li>Scale to many devices</li><li>Idempotent deployments</li>
+</ul></div>
+<div class="box"><h4>Low Code / No Code</h4><p>Catalyst Center / NSO / workflow tools</p><ul>
+<li>Non-technical operators</li><li>Standard use cases</li>
+<li>Fast deployment with existing platform</li><li>Cisco shop with existing licenses</li>
+</ul></div>
+<div class="box"><h4>Custom Application</h4><p>Python scripts / Flask APIs</p><ul>
+<li>Unique business logic</li><li>Multi-system integrations</li>
+<li>Custom UI or approval workflows</li><li>When frameworks are too rigid</li>
+</ul></div>
+</div>
+<div class="callout cb2"><strong>Ansible vs Terraform:</strong> Ansible = config management, multi-vendor, SSH push. Terraform = state tracking, drift detection, infrastructure provisioning. Common: Terraform provisions → Ansible configures.</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Best Approach</th></tr></thead><tbody>
+<tr><td>200 routers, consistent OSPF, Git-tracked, CI/CD pipeline</td><td>IaC Framework — Ansible</td></tr>
+<tr><td>NOC team, no coding skills, standard VLAN provisioning</td><td>Low Code / No Code — Catalyst Center</td></tr>
+<tr><td>Self-service portal, approval workflows, ServiceNow integration</td><td>Custom Application — Python + Flask</td></tr>
+<tr><td>Multi-vendor network, abstract vendor differences</td><td>Ansible (best multi-vendor IaC)</td></tr>
+<tr><td>Detect config drift, enforce desired state</td><td>Terraform (state file tracking)</td></tr>
+<tr><td>Standards-based, direct API, no extra tooling</td><td>RESTCONF + YANG (RFC 8040)</td></tr>
+<tr><td>Complex business logic, custom UI, 5 system integrations</td><td>Custom Application</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 1.6 -->
+<div class="topic" id="s16">
+<div class="th" onclick="toggle(this)"><span class="tnum">1.6</span><h3>REST APIs — Extended Attributes</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Pagination Patterns</h4><ul>
+<li><strong>Offset/Limit:</strong> <code>?limit=100&amp;offset=0</code> → increment offset</li>
+<li><strong>Cursor:</strong> follow <code>nextPage.token</code> until null</li>
+<li><strong>Page Number:</strong> <code>?page=1&amp;per_page=100</code></li>
+<li>Stop when: <code>len(page) &lt; limit</code> OR empty response</li>
+</ul></div>
+<div class="box"><h4>Auth Patterns</h4><ul>
+<li><strong>API Key:</strong> static header on every request</li>
+<li><strong>Token (Catalyst Center):</strong> POST creds → get token → reuse</li>
+<li><strong>OAuth 2.0:</strong> client_id + secret → access_token</li>
+<li><strong>Session:</strong> <code>requests.Session()</code> persists cookies</li>
+</ul></div>
+<div class="box"><h4>Rate Limiting</h4><ul>
+<li>HTTP 429 = Too Many Requests</li>
+<li>Read <code>Retry-After</code> header → wait → retry</li>
+<li>Exponential backoff: <code>2^attempt</code> seconds</li>
+<li>Add random jitter to prevent thundering herd</li>
+<li>Proactive: RateLimiter class before each call</li>
+</ul></div>
+<div class="box"><h4>Error Handling</h4><ul>
+<li>401 → expired token → refresh + retry</li>
+<li>403 → authenticated but forbidden</li>
+<li>404 → wrong URL or missing resource</li>
+<li>409 → exists → use PATCH not POST</li>
+<li>429 → rate limited → wait</li>
+<li><code>JSONDecodeError</code> → got HTML not JSON → check auth</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>API returns 10,000 devices but only 100 per response</td><td>Pagination — offset/limit or cursor pattern</td></tr>
+<tr><td>HTTP 429 — what does it mean?</td><td>Rate limited — read <code>Retry-After</code> header, wait, retry</td></tr>
+<tr><td>HTTP 401 mid-session</td><td>Token expired — refresh token + retry</td></tr>
+<tr><td>HTTP 409 on POST</td><td>Resource already exists — use PUT/PATCH instead</td></tr>
+<tr><td>Exponential backoff wait times</td><td>1s, 2s, 4s, 8s, 16s (<code>2^attempt</code>)</td></tr>
+<tr><td>Why add jitter to backoff?</td><td>Prevent thundering herd — multiple clients retrying simultaneously overload server</td></tr>
+<tr><td>JSONDecodeError on API response</td><td>Auth failed → got HTML redirect instead of JSON</td></tr>
+</tbody></table></div>
+</div></div>
+<!-- DOMAIN 2 -->
+<div class="dh d2"><h2>Domain 2.0 — Infrastructure as Code</h2><span class="wt" style="color:var(--d2)">30%</span></div>
+
+<!-- 2.1 -->
+<div class="topic" id="s21">
+<div class="th" onclick="toggle(this)"><span class="tnum">2.1</span><h3>Git Version Control Operations</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Merge Types</h4><ul>
+<li><strong>Fast-forward:</strong> main hasn't moved → slide pointer forward</li>
+<li><code>--no-ff</code> — force merge commit even if FF possible</li>
+<li><strong>Three-way:</strong> both branches moved → merge commit created</li>
+<li><strong>Squash:</strong> collapse many commits → one clean commit on main</li>
+<li>After squash: <code>git branch -D</code> (capital D = force delete)</li>
+</ul></div>
+<div class="box"><h4>Conflict Markers</h4>
+<div class="cb" style="margin-bottom:6px"><span style="color:#f85149">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>      ← your version
+your content here
+<span style="color:#d29922">=======</span>            ← divider
+their content here
+<span style="color:#3fb950">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/x</span>  ← incoming</div>
+<ul><li>Delete ALL marker lines → <code>git add</code> → <code>git commit</code></li>
+<li>Find remaining: <code>grep -r "&lt;&lt;&lt;&lt;&lt;" .</code></li>
+<li>Abort entire merge: <code>git merge --abort</code></li>
+<li>Accept ALL theirs: <code>git checkout --theirs .</code></li>
+</ul></div>
+<div class="box"><h4>Reset Modes (local only!)</h4><ul>
+<li><code>--soft HEAD~1</code> — undo commit, keep staged</li>
+<li><code>--mixed HEAD~1</code> — undo commit, keep files (default)</li>
+<li><code>--hard HEAD~1</code> — undo commit, DELETE files ⚠️</li>
+<li><strong>Never reset pushed commits</strong></li>
+</ul></div>
+<div class="box"><h4>Revert vs Reset</h4><ul>
+<li><code>revert</code> — adds NEW undo commit (safe for pushed)</li>
+<li><code>reset</code> — moves pointer back (local only)</li>
+<li><strong>Pushed?</strong> → <code>git revert</code></li>
+<li><strong>Still local?</strong> → <code>git reset</code> fine</li>
+<li><code>cherry-pick &lt;hash&gt;</code> — one commit from another branch</li>
+<li>Detached HEAD → <code>git checkout -b new-branch</code></li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>FF possible but want to preserve branch history</td><td><code>git merge --no-ff</code></td></tr>
+<tr><td>8 messy WIP commits → ONE clean commit in main</td><td><code>git merge --squash</code> then <code>git commit -m "clean msg"</code></td></tr>
+<tr><td>Merge started, conflicts too complex</td><td><code>git merge --abort</code></td></tr>
+<tr><td>Accept ALL incoming changes across all files</td><td><code>git checkout --theirs .</code> then <code>git add .</code> &amp;&amp; <code>git commit</code></td></tr>
+<tr><td>After squash merge, can't delete feature branch</td><td><code>git branch -D feature/name</code> (capital D = force)</td></tr>
+<tr><td>Undo last commit, keep changes staged</td><td><code>git reset --soft HEAD~1</code></td></tr>
+<tr><td>Undo last commit, completely discard changes</td><td><code>git reset --hard HEAD~1</code> ⚠️</td></tr>
+<tr><td>One specific commit from another branch</td><td><code>git cherry-pick &lt;hash&gt;</code></td></tr>
+<tr><td>Already pushed — need to undo a commit</td><td><code>git revert &lt;hash&gt;</code> — never reset pushed commits</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 2.2/2.3 -->
+<div class="topic" id="s22">
+<div class="th" onclick="toggle(this)"><span class="tnum">2.2/2.3</span><h3>GitLab CI/CD — Diagnosis &amp; Construction</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Pipeline Structure</h4><ul>
+<li>File: <code>.gitlab-ci.yml</code> in repo root</li>
+<li>Stages run <strong>sequentially</strong> (left → right)</li>
+<li>Jobs within a stage run <strong>in parallel</strong></li>
+<li>One job fails → stage fails → pipeline stops</li>
+<li><code>after_script:</code> — ALWAYS runs (even on fail)</li>
+<li>Secrets: Settings → CI/CD → Variables (Masked + Protected)</li>
+</ul></div>
+<div class="box"><h4>4 Network Automation Stages</h4><ul>
+<li><strong>build</strong> — lint, syntax-check, unit tests</li>
+<li><strong>prevalidation</strong> — ping devices, capture baseline with pyATS</li>
+<li><strong>deploy</strong> — run ansible-playbook / python scripts</li>
+<li><strong>post_validation</strong> — pyATS verify tests, diff baseline</li>
+</ul></div>
+<div class="box"><h4>Failure Diagnosis</h4><ul>
+<li>"No module named X" → add to <code>requirements.txt</code></li>
+<li>"cannot import / has no attribute" → version mismatch</li>
+<li>"Permission denied" → auth / SSH key issue</li>
+<li>"KeyError: VAR_NAME" → CI/CD variable not set</li>
+<li>"Connection refused" → runner can't reach service</li>
+<li>"FAILED test_X" → fix code or fix the test</li>
+</ul></div>
+<div class="box"><h4>Key Features</h4><ul>
+<li><code>artifacts: paths:</code> — pass files between stages</li>
+<li><code>rules: if: '$CI_COMMIT_BRANCH == "main"'</code></li>
+<li><code>when: manual</code> — require human trigger</li>
+<li><code>when: on_success</code> — only if prev stage passed</li>
+<li>Specific runner required to reach network devices</li>
+<li>pyATS + Genie MUST be same version</li>
+</ul></div>
+</div>
+<div class="callout cy"><strong>CML cleanup rule:</strong> Always use <code>after_script:</code> to delete CML labs — not <code>script:</code>. <code>after_script</code> runs even when the pipeline fails.</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Build stage fails: "No module named 'netaddr'"</td><td>Add to <code>requirements.txt</code></td></tr>
+<tr><td>Pipeline fails with <code>KeyError: 'API_KEY'</code></td><td>Env var not set — GitLab Settings → CI/CD → Variables</td></tr>
+<tr><td>pyATS/Genie version mismatch error</td><td>Must use same version: <code>pyats==23.9 genie==23.9</code></td></tr>
+<tr><td>Deploy runs on feature branches — only want on main</td><td><code>rules: - if: '$CI_COMMIT_BRANCH == "main"'</code></td></tr>
+<tr><td>CML lab not cleaned up after failure</td><td>Use <code>after_script:</code> not <code>script:</code></td></tr>
+<tr><td>Pass baseline from prevalidation to post_validation</td><td><code>artifacts: paths: [snapshots/]</code> in prevalidation job</td></tr>
+<tr><td>Pipeline can't reach network devices</td><td>Using shared runner — need specific/self-hosted runner</td></tr>
+<tr><td>Only run deploy on manual trigger</td><td><code>rules: - when: manual</code></td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 2.4 -->
+<div class="topic" id="s24">
+<div class="th" onclick="toggle(this)"><span class="tnum">2.4</span><h3>Cisco Modeling Labs (CML)</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>What CML Is</h4><ul>
+<li>Network simulation — real Cisco OS images</li>
+<li>Full topology simulation (nodes + links)</li>
+<li>REST API controlled — fully automatable</li>
+<li>Test automation BEFORE touching production</li>
+<li>Integrates into CI/CD as a test stage</li>
+</ul></div>
+<div class="box"><h4>API Workflow</h4><ul>
+<li>POST /authenticate → get token</li>
+<li>POST /import → create lab from YAML</li>
+<li>PUT /labs/{id}/start → start lab</li>
+<li>GET /labs/{id}/state → wait for "STARTED"</li>
+<li>Run automation against CML inventory</li>
+<li>DELETE /labs/{id} → cleanup (always!)</li>
+</ul></div>
+<div class="box"><h4>YAML Lab Definition</h4><ul>
+<li><code>nodes:</code> — list of virtual devices</li>
+<li><code>node_definition:</code> — OS type</li>
+<li><code>links:</code> — virtual cables between nodes</li>
+<li><code>configuration:</code> — startup config per node</li>
+<li><code>external_connector</code> — bridge to real network</li>
+</ul></div>
+<div class="box"><h4>Node Definitions</h4><ul>
+<li><code>iosv</code> — IOS router</li>
+<li><code>iosvl2</code> — IOS L2 switch</li>
+<li><code>csr1000v</code> — IOS XE router</li>
+<li><code>nxosv</code> — NX-OS</li>
+<li><code>alpine</code> — Linux test host</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Why use CML before production?</td><td>Safe isolated test env — real Cisco OS — no risk to live network</td></tr>
+<tr><td>How does CML connect to real network?</td><td>External connector node bridges virtual to physical</td></tr>
+<tr><td>pyATS can't reach CML devices</td><td>Check testbed IPs match CML management addresses — SSH enabled on nodes</td></tr>
+<tr><td>Lab left running after pipeline failure</td><td>Use <code>after_script:</code> in GitLab — always cleanup even on fail</td></tr>
+<tr><td>CML node won't start</td><td>Check node definition — image license — server resources (RAM/CPU)</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 2.5 -->
+<div class="topic" id="s25">
+<div class="th" onclick="toggle(this)"><span class="tnum">2.5</span><h3>Docker Compose</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>4 Top-Level Keys</h4><ul>
+<li><code>services:</code> — what containers run</li>
+<li><code>networks:</code> — how they communicate</li>
+<li><code>volumes:</code> — where data persists</li>
+<li><code>version:</code> — compose file format</li>
+</ul></div>
+<div class="box"><h4>Service Key Options</h4><ul>
+<li><code>image:</code> / <code>build:</code> — what to run</li>
+<li><code>ports: "HOST:CONTAINER"</code></li>
+<li><code>environment:</code> / <code>env_file: .env</code></li>
+<li><code>volumes:</code> — bind mount or named</li>
+<li><code>networks:</code> — which networks to join</li>
+<li><code>depends_on:</code> — start ORDER only (not readiness)</li>
+<li><code>restart: always / on-failure / unless-stopped</code></li>
+<li><code>healthcheck:</code> — is service actually ready?</li>
+</ul></div>
+<div class="box"><h4>Volume Types</h4><ul>
+<li><strong>Bind mount:</strong> <code>./host:/container</code></li>
+<li>→ host dir synced in, instant changes</li>
+<li>→ use for: dev configs, files edited on host</li>
+<li><strong>Named volume:</strong> <code>name:/container</code> (Docker managed)</li>
+<li>→ survives <code>docker compose down</code></li>
+<li>→ use for: DB data, production persistence</li>
+<li><code>docker compose down -v</code> deletes volumes ⚠️</li>
+</ul></div>
+<div class="box"><h4>Network DNS Magic</h4><ul>
+<li>Same network → reach by <strong>service name</strong> as hostname</li>
+<li>Different networks → CANNOT communicate</li>
+<li>Example: <code>DB_HOST=postgres</code> resolves automatically</li>
+<li>Multi-network service acts as bridge between them</li>
+<li><code>links:</code> is legacy — use <code>networks:</code> instead</li>
+</ul></div>
+</div>
+<div class="callout cy"><strong>depends_on gotcha:</strong> Only controls START ORDER — not whether the service is actually ready. Use <code>condition: service_healthy</code> + <code>healthcheck:</code> to wait for readiness.</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Service A needs to reach service B by hostname</td><td>Put on same network — use service name as hostname</td></tr>
+<tr><td>Database data lost on restart</td><td>Use named volume, NOT bind mount</td></tr>
+<tr><td>Service crashes immediately — DB not ready</td><td><code>depends_on: condition: service_healthy</code> + <code>healthcheck</code> on DB</td></tr>
+<tr><td>Port 8080:80 — what port does container listen on?</td><td>80 (HOST:CONTAINER format)</td></tr>
+<tr><td>Config file changes need to appear in container instantly</td><td>Use bind mount: <code>./config:/app/config</code></td></tr>
+<tr><td>Credentials in compose file</td><td>Use <code>env_file: .env</code> or <code>${VAR}</code> from <code>.env</code></td></tr>
+<tr><td>What does <code>depends_on</code> guarantee?</td><td>Start ORDER only — NOT readiness/health</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 2.6 -->
+<div class="topic" id="s26">
+<div class="th" onclick="toggle(this)"><span class="tnum">2.6</span><h3>Source of Truth Integration</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>The Golden Rule</h4><ul>
+<li>SoT says it → it SHOULD exist on device</li>
+<li>SoT doesn't say it → it SHOULDN'T exist</li>
+<li>Conflict? → <strong>SoT wins always</strong></li>
+<li>Drift = device ≠ SoT → automation fixes it</li>
+</ul></div>
+<div class="box"><h4>NetBox</h4><ul>
+<li>Open-source IPAM/DCIM platform</li>
+<li>Tracks: sites, racks, devices, interfaces, VLANs, IPs, VRFs</li>
+<li>REST API — <code>Authorization: Token &lt;value&gt;</code></li>
+<li>Runs in Docker Compose (netbox + postgres + redis)</li>
+<li>Dynamic Ansible inventory via <code>nb_inventory</code> plugin</li>
+</ul></div>
+<div class="box"><h4>Git as SoT</h4><ul>
+<li>YAML files in Git repo = source of truth</li>
+<li>Version controlled, human readable</li>
+<li>Less queryable than NetBox</li>
+<li>Good for simpler environments</li>
+</ul></div>
+<div class="box"><h4>SoT-Driven Pipeline</h4><ul>
+<li>Stage 0: validate SoT data (before build)</li>
+<li>Generate config FROM SoT data</li>
+<li>Deploy generated config to devices</li>
+<li>Post-deploy: sync device status back to SoT</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Device config differs from NetBox — which is correct?</td><td>Drift — SoT wins — fix device to match SoT</td></tr>
+<tr><td>Ansible needs dynamic device discovery</td><td>NetBox <code>nb_inventory</code> plugin</td></tr>
+<tr><td>SoT shows VLAN 100, device doesn't have it</td><td>Device is wrong — automation should add it</td></tr>
+<tr><td>Engineer deletes VLAN in NetBox — what should automation do?</td><td>Remove from device — SoT says it shouldn't exist</td></tr>
+<tr><td>Simple environment, no NetBox — what can be SoT?</td><td>Git repo with YAML files</td></tr>
+<tr><td>NetBox API auth method</td><td><code>Authorization: Token &lt;value&gt;</code> in header</td></tr>
+<tr><td>SoT data has errors — catch before deploying?</td><td>Add <code>validate_sot</code> stage before build in CI/CD</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 2.7 -->
+<div class="topic" id="s27">
+<div class="th" onclick="toggle(this)"><span class="tnum">2.7</span><h3>YAML/JSON Representation from YANG Models</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>YANG → JSON Mapping Rules</h4><ul>
+<li><code>module</code> → prefix on outermost key</li>
+<li><code>container</code> → JSON object <code>{}</code></li>
+<li><code>list</code> → JSON array <code>[]</code> (ALWAYS array)</li>
+<li><code>leaf</code> → key:value pair</li>
+<li><code>leaf-list</code> → array of same-type values</li>
+</ul></div>
+<div class="box"><h4>Type Cheatsheet</h4><ul>
+<li><code>uint8/16/32</code> → number: <code>"id": 100</code></li>
+<li><code>string</code> → quoted: <code>"name": "Prod"</code></li>
+<li><code>boolean</code> → <code>true</code>/<code>false</code> (no quotes)</li>
+<li><code>enumeration</code> → quoted: <code>"state": "active"</code></li>
+<li><code>identityref</code> → with prefix: <code>"type": "iana-if-type:ethernetCsmacd"</code></li>
+</ul></div>
+<div class="box"><h4>pyang Symbols</h4><ul>
+<li><code>+--rw</code> — config, include in payload</li>
+<li><code>+--ro</code> — state, NEVER in config payload</li>
+<li><code>*</code> — list → JSON array</li>
+<li><code>?</code> — optional, can omit</li>
+<li>No <code>?</code> — required (list key always required)</li>
+</ul></div>
+<div class="box"><h4>Common Mistakes</h4><ul>
+<li>Missing module prefix on top-level key</li>
+<li>List as object <code>{}</code> instead of array <code>[{}]</code></li>
+<li>Wrong types: <code>"100"</code> (string) vs <code>100</code> (number)</li>
+<li>Including <code>ro</code> fields in config payload</li>
+<li>Omitting list key leaf (always required)</li>
+</ul></div>
+</div>
+<div class="sl">VLAN JSON Example</div>
+<div class="cb"><span class="cm">// YANG: module → container vlans → list vlan</span>
+{
+  <span class="st">"Cisco-IOS-XE-vlan:vlans"</span>: {     <span class="cm">← module:container</span>
+    <span class="st">"vlan"</span>: [                          <span class="cm">← list = always array</span>
+      { <span class="st">"id"</span>: <span class="nu">100</span>, <span class="st">"name"</span>: <span class="st">"Production"</span>, <span class="st">"state"</span>: <span class="st">"active"</span> }
+    ]
+  }
+}
+<span class="cm">// Same as YAML:</span>
+<span class="fn">Cisco-IOS-XE-vlan:vlans</span>:
+  <span class="st">vlan</span>:
+    - id: <span class="nu">100</span>
+      name: Production
+      state: active</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>YANG list → JSON representation</td><td>Array <code>[]</code> with one object per entry</td></tr>
+<tr><td>YANG container → JSON</td><td>Object <code>{}</code> wrapper</td></tr>
+<tr><td><code>+--ro</code> in pyang tree — include in POST?</td><td>NEVER — read-only state data only</td></tr>
+<tr><td>Top-level key format in JSON payload</td><td><code>module:container</code> → <code>"Cisco-IOS-XE-vlan:vlans"</code></td></tr>
+<tr><td>YANG list with 3 entries → JSON</td><td>Array with 3 objects: <code>[{...}, {...}, {...}]</code></td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- DOMAIN 3 -->
+<div class="dh d3"><h2>Domain 3.0 — Operations</h2><span class="wt" style="color:var(--d3)">20%</span></div>
+
+<!-- 3.1 -->
+<div class="topic" id="s31">
+<div class="th" onclick="toggle(this)"><span class="tnum">3.1</span><h3>Model-Driven Telemetry</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>MDT vs SNMP</h4><ul>
+<li>SNMP = pull (manager asks every ~5 min), text MIBs</li>
+<li>MDT = push (device sends continuously), structured YANG</li>
+<li>MDT = configurable interval in seconds</li>
+<li>MDT = on-change for instant event notification</li>
+</ul></div>
+<div class="box"><h4>Subscription Types</h4><ul>
+<li><strong>Periodic:</strong> every N centiseconds regardless of change</li>
+<li>→ use for: counters, CPU, utilization</li>
+<li>→ config: <code>update-policy periodic 1000</code> (=10s)</li>
+<li><strong>On-change:</strong> only when value actually changes</li>
+<li>→ use for: interface up/down, BGP/OSPF state</li>
+<li>→ config: <code>update-policy on-change</code></li>
+</ul></div>
+<div class="box"><h4>Transport Protocols</h4><ul>
+<li><strong>gRPC</strong> — HTTP/2, port 57400/57500, most common</li>
+<li><strong>NETCONF</strong> — SSH, port 830, XML, dial-in only</li>
+<li><strong>gNMI</strong> — gRPC + OpenConfig standard</li>
+<li><strong>Dial-out</strong> — device calls collector (most common)</li>
+<li><strong>Dial-in</strong> — collector calls device</li>
+</ul></div>
+<div class="box"><h4>Full TIG Stack</h4><ul>
+<li><strong>Telegraf</strong> — collector (<code>cisco_telemetry_mdt</code> plugin)</li>
+<li><strong>InfluxDB</strong> — time-series database</li>
+<li><strong>Grafana</strong> — visualization + dashboards + alerting</li>
+<li><strong>GPB</strong> — binary, smallest, fastest (schema needed)</li>
+<li><strong>GPB-KV</strong> — binary, self-describing</li>
+<li><strong>JSON</strong> — human-readable, largest</li>
+</ul></div>
+</div>
+<div class="callout cb2"><strong>Centiseconds math:</strong> 1000 = 10s · 3000 = 30s · 6000 = 60s &nbsp;|&nbsp; YANG path: <code>/module:container/list/leaf</code> · Secure with <code>grpc-tls</code></div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Device sends data every 10 seconds unprompted</td><td>Periodic subscription — <code>update-policy periodic 1000</code></td></tr>
+<tr><td>Interface goes down — instant alert needed</td><td>On-change subscription — <code>update-policy on-change</code></td></tr>
+<tr><td>Device initiates telemetry stream to collector</td><td>Dial-out mode</td></tr>
+<tr><td>Most efficient encoding format</td><td>GPB (binary) — smallest/fastest</td></tr>
+<tr><td>Human-readable telemetry encoding</td><td>JSON — largest but readable</td></tr>
+<tr><td>Collector software for gRPC MDT</td><td>Telegraf with <code>cisco_telemetry_mdt</code> plugin</td></tr>
+<tr><td>Time-series database for metrics</td><td>InfluxDB</td></tr>
+<tr><td>Centiseconds for 30-second interval</td><td>3000 (30 × 100)</td></tr>
+<tr><td>Secure the telemetry stream</td><td><code>grpc-tls</code> protocol + TLS certificates</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 3.2 -->
+<div class="topic" id="s32">
+<div class="th" onclick="toggle(this)"><span class="tnum">3.2</span><h3>Logging Strategy</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Syslog Severity Levels</h4><ul>
+<li><strong>0</strong> EMERGENCY · <strong>1</strong> ALERT · <strong>2</strong> CRITICAL</li>
+<li><strong>3 ERROR</strong> ← task failed, API error</li>
+<li><strong>4 WARNING</strong> ← retry, deprecated module</li>
+<li><strong>5</strong> NOTICE</li>
+<li><strong>6 INFO</strong> ← task succeeded, config applied</li>
+<li><strong>7 DEBUG</strong> ← all detail, raw responses</li>
+<li>Lower number = higher severity</li>
+</ul></div>
+<div class="box"><h4>Python Logging Architecture</h4><ul>
+<li><strong>Logger</strong> → <strong>Handler</strong> → <strong>Formatter</strong></li>
+<li><code>getLogger('name')</code> — singleton everywhere</li>
+<li><code>setLevel(DEBUG)</code> — gate (lower # = captures more)</li>
+<li><code>SysLogHandler(address=('ip', 514))</code></li>
+<li>UDP default (fire-and-forget)</li>
+<li>Multiple handlers = logs to all simultaneously</li>
+<li>Use <code>%s</code> not f-strings (lazy evaluation)</li>
+</ul></div>
+<div class="box"><h4>Syslog vs Webhook</h4><ul>
+<li><strong>Syslog</strong> — passive DVR, stores everything</li>
+<li>→ UDP 514 default · TCP for reliable delivery</li>
+<li>→ long-term storage, audit trail</li>
+<li><strong>Webhook</strong> — active doorbell, triggers actions</li>
+<li>→ HTTP POST to Webex/Slack/PagerDuty</li>
+<li>→ real-time alerting on failures</li>
+</ul></div>
+<div class="box"><h4>Best Practices</h4><ul>
+<li>Production: set level INFO</li>
+<li>Debug/troubleshoot: set level DEBUG</li>
+<li>CI/CD: ERRORs → webhook, all → syslog</li>
+<li>Never log credentials or tokens ❌</li>
+<li>TCP for reliable syslog: <code>socktype=socket.SOCK_STREAM</code></li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Send real-time alert to Webex on failure</td><td>Webhook — HTTP POST to Webex API</td></tr>
+<tr><td>Default transport for SysLogHandler</td><td>UDP (fire and forget)</td></tr>
+<tr><td>Logger level set to WARNING — what gets blocked?</td><td>DEBUG and INFO (levels 7 and 6)</td></tr>
+<tr><td>Why use <code>%s</code> over f-strings in logger?</td><td>Lazy evaluation — string only built if message will actually be logged</td></tr>
+<tr><td><code>getLogger('name')</code> called twice with same name</td><td>Returns the SAME logger object (singleton)</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 3.3 -->
+<div class="topic" id="s33">
+<div class="th" onclick="toggle(this)"><span class="tnum">3.3</span><h3>Diagnose Problems from Logs</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="callout cb2"><strong>Diagnostic mindset:</strong> Traceback → read bottom up (root cause at bottom). Pipeline → fix left to right (first red stage). Ansible → first FAILED task is where to start.</div>
+<div class="tw"><table><thead><tr><th>Log Pattern</th><th>Root Cause</th><th>Fix</th></tr></thead><tbody>
+<tr><td><code>SSLError: CERTIFICATE_VERIFY_FAILED</code></td><td>Python can't verify CA</td><td><code>verify='/path/to/ca.crt'</code></td></tr>
+<tr><td><code>JSONDecodeError: Expecting value</code></td><td>Got HTML not JSON — auth failed</td><td>Fix auth/token first, log <code>response.text</code></td></tr>
+<tr><td>Ansible <code>unreachable=1</code></td><td>Can't reach device at all</td><td>Check network/SSH/firewall/credentials</td></tr>
+<tr><td><code>KeyError: 'VARIABLE_NAME'</code></td><td>Env var not set in pipeline</td><td>Add to GitLab CI/CD Variables</td></tr>
+<tr><td>HTTP 401</td><td>Bad/expired token</td><td>Refresh token + retry</td></tr>
+<tr><td>HTTP 403</td><td>Authenticated but forbidden</td><td>Check permissions/role</td></tr>
+<tr><td>HTTP 404</td><td>Wrong URL or missing resource</td><td>Check URL path, check resource exists</td></tr>
+<tr><td>HTTP 429</td><td>Rate limited</td><td>Wait (<code>Retry-After</code> header) then retry</td></tr>
+<tr><td>"No module named X"</td><td>Missing dependency</td><td>Add to <code>requirements.txt</code></td></tr>
+<tr><td>"cannot import / has no attribute"</td><td>Version incompatibility</td><td>Pin compatible versions</td></tr>
+<tr><td>"Permission denied (publickey)"</td><td>SSH auth failure</td><td>Check SSH key or credentials</td></tr>
+<tr><td>"Connection refused"</td><td>Service not running or wrong port</td><td>Check service is up and port is correct</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 3.4 -->
+<div class="topic" id="s34">
+<div class="th" onclick="toggle(this)"><span class="tnum">3.4</span><h3>pyATS Change Validation</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>3 CLI Commands</h4><ul>
+<li><code>pyats learn vlan interface ospf --output before/</code></li>
+<li><code>pyats diff before/ after/</code></li>
+<li>→ <code>+</code> = ADDED · <code>-</code> = REMOVED</li>
+<li><code>pyats run job job_file.py --testbed-file testbed.yaml</code></li>
+</ul></div>
+<div class="box"><h4>testbed.yaml Keys</h4><ul>
+<li><code>os: iosxe / iosxr / nxos / ios / asa</code></li>
+<li><code>connections.cli.protocol: ssh</code></li>
+<li><code>connections.cli.ip:</code> — management IP</li>
+<li><code>credentials.default.username/password</code></li>
+<li>pyATS + Genie MUST be same version</li>
+</ul></div>
+<div class="box"><h4>Test Script Structure</h4><ul>
+<li><code>CommonSetup</code> — runs ONCE before all tests</li>
+<li>→ <code>connect_to_devices(testbed)</code></li>
+<li><code>Testcase</code> — individual test class</li>
+<li>→ <code>@aetest.setup</code> then <code>@aetest.test</code></li>
+<li><code>CommonCleanup</code> — runs ONCE after all tests</li>
+<li>→ <code>disconnect_from_devices()</code></li>
+</ul></div>
+<div class="box"><h4>Genie Parsing</h4><ul>
+<li><code>device.parse('show vlan')</code> → Python dict</li>
+<li><code>device.parse('show ip ospf neighbor')</code></li>
+<li><code>device.parse('show interfaces')</code></li>
+<li>No more screen scraping — structured data</li>
+<li><code>self.failed()</code> to fail a test case</li>
+</ul></div>
+</div>
+<div class="callout cg"><strong>Change validation workflow:</strong> <code>pyats learn</code> (before) → make change → <code>pyats learn</code> (after) → <code>pyats diff</code> → <code>pyats run</code> verify tests</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Capture state before a change</td><td><code>pyats learn &lt;features&gt; --output before/</code></td></tr>
+<tr><td>Compare before and after change</td><td><code>pyats diff before/ after/</code></td></tr>
+<tr><td><code>+</code> in diff output</td><td>Something was ADDED</td></tr>
+<tr><td><code>-</code> in diff output</td><td>Something was REMOVED</td></tr>
+<tr><td>pyATS/Genie version mismatch</td><td>Must use same version: <code>pip install pyats==X genie==X</code></td></tr>
+<tr><td>Parse show vlan into structured data</td><td><code>device.parse('show vlan')</code> — returns Python dict</td></tr>
+<tr><td>Pass baseline to post_validation in CI/CD</td><td><code>artifacts: paths: [snapshots/]</code> in prevalidation job</td></tr>
+<tr><td>What runs once before all tests?</td><td><code>CommonSetup</code> class</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 3.5 -->
+<div class="topic" id="s35">
+<div class="th" onclick="toggle(this)"><span class="tnum">3.5</span><h3>TLS Certificates</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Key Concepts</h4><ul>
+<li><strong>Private key 🗝️</strong> — never leaves server</li>
+<li><strong>Public key 🏠</strong> — share freely, embedded in cert</li>
+<li><strong>CSR 📋</strong> — passport application (sent to CA)</li>
+<li><strong>Certificate 🪪</strong> — signed passport (CA stamped)</li>
+<li><strong>CA 🏛️</strong> — trusted signing authority</li>
+</ul></div>
+<div class="box"><h4>Process Flow</h4><ul>
+<li>Gen key: <code>openssl genrsa -out server.key 2048</code></li>
+<li>Create CSR: <code>openssl req -new -key server.key -out server.csr</code></li>
+<li>CA signs CSR → returns <code>server.crt</code></li>
+<li>Deploy: key + cert + CA chain</li>
+<li>Trust chain: cert → intermediate → root → ✅</li>
+</ul></div>
+<div class="box"><h4>Python Usage</h4><ul>
+<li><code>verify='/path/to/ca-chain.crt'</code> — use your CA</li>
+<li><code>verify=False</code> — DEV ONLY, NEVER production ❌</li>
+<li><code>cert=('client.crt','client.key')</code> — mutual TLS</li>
+<li>Browser uses system trust store; Python uses its own</li>
+</ul></div>
+<div class="box"><h4>Let's Encrypt / ACME</h4><ul>
+<li>Free, automated, 90-day certs</li>
+<li>Domain validated via HTTP port 80 (must be open)</li>
+<li>Alt: DNS-01 challenge (no port 80 needed)</li>
+<li>Air-gapped networks → use internal CA instead</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td><code>SSL: CERTIFICATE_VERIFY_FAILED</code> in Python</td><td>Add: <code>verify='/path/to/ca-chain.crt'</code></td></tr>
+<tr><td>Cert works in browser, not Python script</td><td>Different trust stores — pass <code>verify=</code> parameter</td></tr>
+<tr><td>Port 80 blocked, ACME fails</td><td>Open port 80 or use DNS-01 challenge instead</td></tr>
+<tr><td>Hostname mismatch error</td><td>CN/SAN doesn't match URL — reissue cert with correct SAN</td></tr>
+<tr><td><code>verify=False</code> — when acceptable?</td><td>Development/lab ONLY — NEVER production</td></tr>
+<tr><td>Air-gapped network, Let's Encrypt won't work</td><td>Use internal CA — openssl CSR → submit to internal CA</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 3.6 -->
+<div class="topic" id="s36">
+<div class="th" onclick="toggle(this)"><span class="tnum">3.6</span><h3>Secure Coding Practices</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Pillar 1 — Input Validation</h4><ul>
+<li>Whitelist &gt; blacklist (allow known good only)</li>
+<li>Type + range check everything</li>
+<li>Use <code>subprocess</code> list form — never <code>os.system()</code></li>
+<li><code>["ssh", f"admin@{device}"]</code> → shell never interprets</li>
+<li>Pydantic for API payload schema validation</li>
+</ul></div>
+<div class="box"><h4>Pillar 2 — Authentication</h4><ul>
+<li>Basic auth ❌ → Token/OAuth ✅ → mTLS 🏆</li>
+<li>Auto-refresh tokens before expiry</li>
+<li><code>verify=</code> always points to CA cert</li>
+<li><code>verify=False</code> — NEVER in production</li>
+</ul></div>
+<div class="box"><h4>Pillar 3 — Secret Management</h4><ul>
+<li>Never in code ❌ · Never in git ❌ · Never in logs ❌</li>
+<li><code>os.getenv('VAR_NAME')</code> ✅</li>
+<li><code>python-dotenv</code> + <code>.env</code> file ✅</li>
+<li>HashiCorp Vault for production ✅</li>
+<li><code>.gitignore</code>: <code>.env</code>, <code>*.key</code>, <code>*.pem</code></li>
+</ul></div>
+</div>
+<div class="callout cr"><strong>Never do these:</strong> hardcode passwords · commit <code>.env</code> to git · use <code>os.system()</code> with user input · log tokens/passwords · use <code>verify=False</code> in production</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Password visible in git history</td><td>Hardcoded creds committed — rotate ALL secrets, add <code>.gitignore</code>, use env vars</td></tr>
+<tr><td>Script crashes on bad VLAN input</td><td>No input validation — add type + range checking</td></tr>
+<tr><td>API token appears in log file</td><td><code>logger.debug</code> logged the token — never log credentials</td></tr>
+<tr><td>Command injection via device name</td><td><code>os.system()</code> with raw input — use <code>subprocess</code> list form</td></tr>
+<tr><td>Script works locally, fails in CI/CD with missing var</td><td><code>.env</code> not in CI/CD — set secrets as pipeline variables</td></tr>
+</tbody></table></div>
+</div></div>
+<!-- DOMAIN 4 -->
+<div class="dh d4"><h2>Domain 4.0 — AI in Automation</h2><span class="wt" style="color:var(--d4)">20%</span></div>
+
+<!-- 4.1 -->
+<div class="topic" id="s41">
+<div class="th" onclick="toggle(this)"><span class="tnum">4.1</span><h3>AI-Assisted Code Development</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Benefits</h4><ul>
+<li>Boilerplate generation (playbooks, scripts)</li>
+<li>Code translation (Ansible → Python, CLI → JSON)</li>
+<li>Debugging — explains tracebacks in plain language</li>
+<li>Learning acceleration</li>
+<li>Documentation generation</li>
+</ul></div>
+<div class="box"><h4>Risk 1 — Data Privacy</h4><ul>
+<li>Pasting code → sends to AI provider servers</li>
+<li>May expose: IPs, credentials, topology, API keys</li>
+<li>Fix: sanitize before pasting (use placeholders)</li>
+<li>Fix: use on-premise/private AI instances</li>
+</ul></div>
+<div class="box"><h4>Risk 2 — IP Ownership</h4><ul>
+<li>AI trained on public code repos</li>
+<li>Generated code may match licensed source</li>
+<li>Unclear who owns AI-generated code</li>
+<li>Fix: review AI tool's IP policy before shipping</li>
+</ul></div>
+<div class="box"><h4>Risk 3 — Code Validation</h4><ul>
+<li>AI hallucinates — confident but wrong</li>
+<li>Wrong YANG modules, deprecated syntax</li>
+<li>Outdated training data for framework versions</li>
+<li>Fix: always test in CML before production</li>
+<li>Fix: cross-reference official Cisco docs</li>
+<li>AI output = DRAFT, not FINAL</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Engineer pastes prod config into public AI tool</td><td>Data privacy risk — credentials/topology exposed to AI provider</td></tr>
+<tr><td>AI generates RESTCONF payload, deployed without testing</td><td>Code validation risk — always test in CML first</td></tr>
+<tr><td>Company asks if they own AI-generated code</td><td>IP ownership concern — review AI tool's IP policy</td></tr>
+<tr><td>AI confidently gives wrong module name</td><td>Hallucination — cross-reference official documentation</td></tr>
+<tr><td>AI suggests <code>verify=False</code> to fix SSL error</td><td>Violates secure coding (3.6) — never accept this suggestion</td></tr>
+<tr><td>Which risk: AI gives deprecated Ansible syntax</td><td>Code validation / accuracy — always verify against current docs</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 4.2 -->
+<div class="topic" id="s42">
+<div class="th" onclick="toggle(this)"><span class="tnum">4.2</span><h3>Security Risks in AI-Based Automation</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>Prompt Injection</h4><ul>
+<li>Attacker embeds instructions in network data</li>
+<li>AI reads syslog/trap/hostname → gets hijacked</li>
+<li>Fix: sanitize all inputs before AI sees them</li>
+<li>Fix: constrain AI to predefined action list</li>
+<li>Fix: human approval for destructive actions</li>
+</ul></div>
+<div class="box"><h4>Data Poisoning</h4><ul>
+<li>Attacker corrupts telemetry/logs AI uses</li>
+<li>Fake high CPU → AI removes BGP neighbors</li>
+<li>Fake failed SSH → AI blocks legitimate access</li>
+<li>Fix: authenticate and validate data sources</li>
+<li>Fix: cross-validate across multiple sources</li>
+</ul></div>
+<div class="box"><h4>Over-Automation</h4><ul>
+<li>AI makes cascading bad decisions</li>
+<li>One bad input → entire network impacted</li>
+<li>Fix: human approval for significant changes</li>
+<li>Fix: limit AI scope (read-only by default)</li>
+<li>Fix: rate-limit AI actions per time period</li>
+</ul></div>
+<div class="box"><h4>Lack of Auditability</h4><ul>
+<li>AI decisions are hard to explain after the fact</li>
+<li>Can't prove what/why network changed</li>
+<li>Fix: log all AI decisions + reasoning</li>
+<li>Fix: before/after snapshots (pyATS!)</li>
+<li>Fix: force structured AI output (JSON)</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Risk + Answer</th></tr></thead><tbody>
+<tr><td>AI reads syslog, attacker puts instructions in log message</td><td>Prompt injection — sanitize inputs before feeding to AI</td></tr>
+<tr><td>AI monitors telemetry, attacker sends fake high-utilization data</td><td>Data poisoning — validate and authenticate data sources</td></tr>
+<tr><td>AI makes cascading BGP changes after misreading CPU alert</td><td>Over-automation — human approval required, constrain AI scope</td></tr>
+<tr><td>Auditor asks why AI changed route policy — no explanation</td><td>Lack of auditability — log all AI decisions + reasoning</td></tr>
+<tr><td>AI generates ACL with <code>permit any any</code></td><td>Insecure AI output — always review AI-generated security configs</td></tr>
+<tr><td>Training data corrupted — model misclassifies threats</td><td>Training data poisoning — validate/curate training data</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 4.3 -->
+<div class="topic" id="s43">
+<div class="th" onclick="toggle(this)"><span class="tnum">4.3</span><h3>MCP Server with Python FastMCP</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>What MCP Does</h4><ul>
+<li>Bridges AI agents to real network data and actions</li>
+<li>User → AI → MCP Client → MCP Server → Network</li>
+<li><strong>Tools</strong> — functions AI can call</li>
+<li><strong>Resources</strong> — data AI can read (URI-addressed)</li>
+<li><strong>Prompts</strong> — reusable instruction templates</li>
+</ul></div>
+<div class="box"><h4>FastMCP Pattern</h4><ul>
+<li><code>mcp = FastMCP(name, instructions)</code></li>
+<li><code>@mcp.tool()</code> — register a callable tool</li>
+<li><code>@mcp.resource("uri")</code> — register a resource</li>
+<li><code>@mcp.prompt()</code> — register a prompt template</li>
+<li><code>mcp.run()</code> — start with stdio (default)</li>
+<li><code>mcp.run(transport="sse", host=..., port=...)</code> — remote</li>
+</ul></div>
+<div class="box"><h4>Transport Types</h4><ul>
+<li><strong>stdio</strong> — local, same machine, dev/testing, 1 client</li>
+<li><strong>SSE</strong> — remote, HTTP, multiple clients, production</li>
+</ul>
+<h4 style="margin-top:10px">Tool Design Rules</h4><ul>
+<li>Type hints REQUIRED — define the schema AI uses</li>
+<li>Docstring REQUIRED — AI reads to decide when/how to call</li>
+<li>Secrets in env vars (never in code)</li>
+<li><code>verify=</code> CA cert (never False)</li>
+<li>Validate inputs — return error dict if invalid</li>
+</ul></div>
+</div>
+<div class="cb"><span class="kw">from</span> fastmcp <span class="kw">import</span> FastMCP
+<span class="kw">import</span> os, requests
+
+mcp = <span class="fn">FastMCP</span>(<span class="st">"Network Tools"</span>)
+
+<span class="fn">@mcp.tool()</span>
+<span class="kw">def</span> <span class="fn">get_vlans</span>(device_ip: str) -> dict:
+    <span class="st">"""Get all VLANs on a Cisco IOS XE switch.
+    Args: device_ip - management IP of target switch
+    Returns: dict with VLAN list"""</span>
+    url = <span class="st">f"https://{device_ip}/restconf/data/Cisco-IOS-XE-vlan:vlans"</span>
+    <span class="kw">return</span> requests.<span class="fn">get</span>(url,
+        auth=(os.<span class="fn">getenv</span>(<span class="st">"DEVICE_USER"</span>), os.<span class="fn">getenv</span>(<span class="st">"DEVICE_PASS"</span>)),
+        headers={<span class="st">"Accept"</span>: <span class="st">"application/yang-data+json"</span>},
+        verify=os.<span class="fn">getenv</span>(<span class="st">"CA_CERT_PATH"</span>)).<span class="fn">json</span>()
+
+<span class="kw">if</span> __name__ == <span class="st">"__main__"</span>:
+    mcp.<span class="fn">run</span>(transport=<span class="st">"sse"</span>, host=<span class="st">"0.0.0.0"</span>, port=<span class="nu">8000</span>)</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>AI can't access live network data</td><td>Build MCP server with tools that query real devices</td></tr>
+<tr><td>Tool not called correctly by AI</td><td>Improve docstring clarity + check type hints</td></tr>
+<tr><td>MCP server for multiple AI clients on different machines</td><td>Use SSE transport, not stdio</td></tr>
+<tr><td>Credentials in MCP server code</td><td>Security violation (3.6) — use environment variables</td></tr>
+<tr><td>AI calls wrong tool for the task</td><td>Improve server <code>instructions</code> and tool docstrings</td></tr>
+<tr><td>MCP server needs to run remotely</td><td>SSE transport — <code>host</code> + <code>port</code> parameters</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 4.4 -->
+<div class="topic" id="s44">
+<div class="th" onclick="toggle(this)"><span class="tnum">4.4</span><h3>Conversational Agent with LLMs</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="grid">
+<div class="box"><h4>ReAct Loop Pattern</h4><ul>
+<li><strong>Thought</strong> → "I need to check OSPF neighbors"</li>
+<li><strong>Action</strong> → call <code>get_ospf_neighbors()</code></li>
+<li><strong>Observation</strong> → tool result returned</li>
+<li><strong>Repeat</strong> until enough info to answer</li>
+<li><strong>Final answer</strong> → <code>stop_reason = "end_turn"</code></li>
+</ul></div>
+<div class="box"><h4>Agent Loop Logic</h4><ul>
+<li><code>stop_reason == "tool_use"</code>:</li>
+<li>→ extract tool name + input from content block</li>
+<li>→ execute the tool call</li>
+<li>→ append result to messages as <code>tool_result</code></li>
+<li>→ call API again (loop continues)</li>
+<li><code>stop_reason == "end_turn"</code>:</li>
+<li>→ extract text from content, return as answer</li>
+</ul></div>
+<div class="box"><h4>3 Key Components</h4><ul>
+<li><strong>System prompt</strong> — personality, constraints, what NOT to do</li>
+<li><strong>Messages list</strong> — FULL conversation history each call</li>
+<li><strong>Tools list</strong> — schema for what agent can call</li>
+<li>All three passed to <code>messages.create()</code></li>
+<li><code>max_iterations</code> — prevents infinite loops</li>
+</ul></div>
+<div class="box"><h4>LangChain (4.4 Extension)</h4><ul>
+<li>Framework that wraps the manual agent pattern</li>
+<li><code>@tool</code> decorator — registers Python function as tool</li>
+<li><code>AgentExecutor</code> — handles ReAct loop automatically</li>
+<li><code>ChatAnthropic()</code> — LLM abstraction layer</li>
+<li><code>agent_scratchpad</code> — ReAct workspace in prompt</li>
+<li><code>max_iterations</code> — prevents infinite loops</li>
+<li>Provider abstraction — swap LLM with one line</li>
+</ul></div>
+</div>
+<div class="cb"><span class="cm"># Core agent loop skeleton</span>
+iterations = <span class="nu">0</span>
+<span class="kw">while</span> iterations < MAX_ITERATIONS:
+    response = client.messages.<span class="fn">create</span>(
+        model=<span class="st">"claude-sonnet-4-6"</span>,
+        system=SYSTEM_PROMPT,
+        tools=NETWORK_TOOLS,
+        messages=messages
+    )
+    <span class="kw">if</span> response.stop_reason == <span class="st">"end_turn"</span>:
+        <span class="kw">return</span> response.content[<span class="nu">0</span>].text    <span class="cm"># done — final answer</span>
+    <span class="kw">if</span> response.stop_reason == <span class="st">"tool_use"</span>:
+        messages.<span class="fn">append</span>({<span class="st">"role"</span>: <span class="st">"assistant"</span>, <span class="st">"content"</span>: response.content})
+        <span class="cm"># ... execute tool, append tool_result to messages ...</span>
+        iterations += <span class="nu">1</span>    <span class="cm"># loop continues</span></div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th>Answer</th></tr></thead><tbody>
+<tr><td>Agent keeps calling tools forever</td><td>Add <code>max_iterations</code> limit + check tool returns valid data</td></tr>
+<tr><td><code>stop_reason = "tool_use"</code> — what to do?</td><td>Execute tool, add result to messages, loop again</td></tr>
+<tr><td><code>stop_reason = "end_turn"</code> — what to do?</td><td>Extract text from content — return as final answer</td></tr>
+<tr><td>Agent forgets context between user messages</td><td>Maintain <code>conversation_history</code> list across turns</td></tr>
+<tr><td>What drives agent behavior and constraints?</td><td>System prompt defines personality + constraints</td></tr>
+<tr><td>LangChain — what replaces the manual while loop?</td><td><code>AgentExecutor</code></td></tr>
+<tr><td>LangChain — how to register a Python function as tool?</td><td><code>@tool</code> decorator</td></tr>
+<tr><td>LangChain — ReAct workspace in prompt?</td><td><code>agent_scratchpad</code> placeholder</td></tr>
+<tr><td>LangChain — key advantage over manual agent?</td><td>Provider abstraction — swap LLM (Claude/GPT-4/Gemini) with one line</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- 4.5 -->
+<div class="topic" id="s45">
+<div class="th" onclick="toggle(this)"><span class="tnum">4.5</span><h3>Evaluate AI Recommendations</h3><span class="chev">▶</span></div>
+<div class="tb">
+<div class="callout cb2"><strong>Core mindset:</strong> AI output = draft from a junior engineer. You = senior engineer doing code review. YOU are always responsible for what gets deployed.</div>
+<div class="grid">
+<div class="box"><h4>5 Evaluation Dimensions</h4><ul>
+<li><strong>1. Technical accuracy</strong> — right modules, methods, versions?</li>
+<li><strong>2. Security soundness</strong> — no red flags?</li>
+<li><strong>3. Context fit</strong> — right for MY environment/OS/policy?</li>
+<li><strong>4. Completeness</strong> — error handling, logging, validation?</li>
+<li><strong>5. Best practice</strong> — right tool, idempotent, CI/CD ready?</li>
+</ul></div>
+<div class="box"><h4>Security Red Flags — Instant Fail</h4><ul>
+<li><code>verify=False</code> ❌</li>
+<li>Hardcoded credentials ❌</li>
+<li><code>permit any any</code> ACL ❌</li>
+<li><code>network 0.0.0.0 255.255.255.255 area 0</code> ❌</li>
+<li><code>os.system()</code> with user input ❌</li>
+<li>Debug logging in production ❌</li>
+</ul></div>
+<div class="box"><h4>Completeness Checklist</h4><ul>
+<li>Try/except error handling?</li>
+<li>Logging statements?</li>
+<li>Pre/post validation?</li>
+<li>Rollback plan?</li>
+<li>Input validation?</li>
+<li>Secrets in env vars?</li>
+<li>TLS verification with real CA cert?</li>
+</ul></div>
+</div>
+<div class="sl">Exam Scenarios</div>
+<div class="tw"><table><thead><tr><th>AI Output</th><th>Problem + Fix</th></tr></thead><tbody>
+<tr><td>Uses <code>http://</code> in RESTCONF URL</td><td>Must be <code>https://</code> — TLS required</td></tr>
+<tr><td>Uses <code>ietf-vlan:vlans</code> module</td><td>Wrong module — should be <code>Cisco-IOS-XE-vlan:vlans</code></td></tr>
+<tr><td>Uses POST to update existing VLAN</td><td>Should be PUT or PATCH — POST creates new resources</td></tr>
+<tr><td>Omits <code>Accept</code>/<code>Content-Type</code> headers</td><td>RESTCONF requires both headers — must add them</td></tr>
+<tr><td>Hardcodes credentials in script</td><td>Security violation — use env vars (3.6)</td></tr>
+<tr><td>Generates <code>network 0.0.0.0 255.255.255.255 area 0</code></td><td>OSPF on ALL interfaces including internet-facing — specify exact subnets</td></tr>
+<tr><td>Generates <code>permit any any</code> ACL</td><td>Security policy bypassed — specify exact source/destination</td></tr>
+<tr><td>Missing error handling (no try/except)</td><td>Not production ready — add try/except blocks</td></tr>
+<tr><td>No logging statements</td><td>Violates 3.2 — add logging statements</td></tr>
+<tr><td>AI output looks right but device rejects it</td><td>Test in CML first — never trust without validating</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- QUICK REFERENCE -->
+<div class="dh ref"><h2>Quick Reference</h2></div>
+
+<!-- PORTS -->
+<div class="topic" id="ports">
+<div class="th open" onclick="toggle(this)"><span class="tnum">📡</span><h3>Ports &amp; Numbers to Know Cold</h3><span class="chev">▶</span></div>
+<div class="tb open">
+<div class="qg">
+<div class="qi"><span>SSH / Netmiko</span><span class="v">22</span></div>
+<div class="qi"><span>Syslog (UDP)</span><span class="v">514</span></div>
+<div class="qi"><span>NETCONF (ncclient)</span><span class="v">830</span></div>
+<div class="qi"><span>RESTCONF (HTTPS)</span><span class="v">443</span></div>
+<div class="qi"><span>gRPC MDT</span><span class="v">57400/57500</span></div>
+<div class="qi"><span>VLAN valid range</span><span class="v">1–4094</span></div>
+<div class="qi"><span>Syslog ERROR</span><span class="v">level 3</span></div>
+<div class="qi"><span>Syslog WARNING</span><span class="v">level 4</span></div>
+<div class="qi"><span>Syslog INFO</span><span class="v">level 6</span></div>
+<div class="qi"><span>Syslog DEBUG</span><span class="v">level 7</span></div>
+<div class="qi"><span>MDT 10s interval</span><span class="v">1000 cs</span></div>
+<div class="qi"><span>MDT 30s interval</span><span class="v">3000 cs</span></div>
+<div class="qi"><span>MDT 60s interval</span><span class="v">6000 cs</span></div>
+<div class="qi"><span>Backoff: 2^0</span><span class="v">1 second</span></div>
+<div class="qi"><span>Backoff: 2^1</span><span class="v">2 seconds</span></div>
+<div class="qi"><span>Backoff: 2^2</span><span class="v">4 seconds</span></div>
+<div class="qi"><span>Backoff: 2^3</span><span class="v">8 seconds</span></div>
+<div class="qi"><span>Backoff: 2^4</span><span class="v">16 seconds</span></div>
+</div>
+</div></div>
+
+<!-- HTTP CODES -->
+<div class="topic" id="http">
+<div class="th open" onclick="toggle(this)"><span class="tnum">🌐</span><h3>HTTP Status Codes</h3><span class="chev">▶</span></div>
+<div class="tb open">
+<div class="tw"><table><thead><tr><th>Code</th><th>Meaning</th><th>Network Automation Context</th></tr></thead><tbody>
+<tr><td><span style="color:var(--green)">200 OK</span></td><td>Success</td><td>GET, PATCH succeeded</td></tr>
+<tr><td><span style="color:var(--green)">201 Created</span></td><td>Resource created</td><td>POST succeeded — new resource exists</td></tr>
+<tr><td><span style="color:var(--green)">204 No Content</span></td><td>Success, no body</td><td>DELETE / PUT succeeded</td></tr>
+<tr><td><span style="color:var(--red)">400 Bad Request</span></td><td>Malformed request</td><td>Bad JSON payload, wrong format</td></tr>
+<tr><td><span style="color:var(--red)">401 Unauthorized</span></td><td>Auth failed</td><td>Bad or expired token → refresh and retry</td></tr>
+<tr><td><span style="color:var(--red)">403 Forbidden</span></td><td>Auth OK, no permission</td><td>Check role/permissions in system</td></tr>
+<tr><td><span style="color:var(--red)">404 Not Found</span></td><td>Resource missing</td><td>Wrong URL or resource doesn't exist</td></tr>
+<tr><td><span style="color:var(--yellow)">409 Conflict</span></td><td>Already exists</td><td>POST → resource exists → use PUT/PATCH</td></tr>
+<tr><td><span style="color:var(--red)">429 Too Many</span></td><td>Rate limited</td><td>Read Retry-After header, wait, retry</td></tr>
+<tr><td><span style="color:var(--red)">500 Server Error</span></td><td>Server-side bug</td><td>Not your fault — retry with backoff</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- TOOLS -->
+<div class="topic" id="tools">
+<div class="th open" onclick="toggle(this)"><span class="tnum">🔧</span><h3>Tools Quick Reference</h3><span class="chev">▶</span></div>
+<div class="tb open">
+<div class="tw"><table><thead><tr><th>Tool</th><th>Purpose</th><th>Key Detail</th></tr></thead><tbody>
+<tr><td>Ansible</td><td>Agentless config management</td><td>YAML playbooks, SSH push, idempotent states</td></tr>
+<tr><td>Terraform</td><td>Declarative state management</td><td>HCL, state file, drift detection, plan/apply</td></tr>
+<tr><td>netmiko</td><td>Python SSH to network devices</td><td><code>ConnectHandler</code>, <code>send_config_set()</code>, port 22</td></tr>
+<tr><td>ncclient</td><td>Python NETCONF client</td><td>XML over SSH, port 830, candidate → commit</td></tr>
+<tr><td>requests</td><td>Python HTTP / RESTCONF client</td><td>HTTPBasicAuth, JSON, <code>verify=</code> CA cert</td></tr>
+<tr><td>pyATS</td><td>Network test framework</td><td><code>learn</code> / <code>diff</code> / <code>run</code> CLI commands</td></tr>
+<tr><td>Genie</td><td>CLI output parser</td><td><code>device.parse('show vlan')</code> → dict; must match pyATS version</td></tr>
+<tr><td>pyang</td><td>YANG model viewer</td><td><code>pyang -f tree module.yang</code></td></tr>
+<tr><td>FastMCP</td><td>Python MCP server framework</td><td><code>@mcp.tool()</code>, stdio/SSE transport</td></tr>
+<tr><td>LangChain</td><td>LLM agent framework</td><td><code>@tool</code>, <code>AgentExecutor</code>, <code>max_iterations</code></td></tr>
+<tr><td>Telegraf</td><td>MDT collector</td><td><code>cisco_telemetry_mdt</code> input plugin</td></tr>
+<tr><td>InfluxDB</td><td>Time-series database</td><td>Stores MDT metrics with timestamps</td></tr>
+<tr><td>Grafana</td><td>Visualization</td><td>Dashboards + alerting from InfluxDB</td></tr>
+<tr><td>NetBox</td><td>Source of Truth (IPAM/DCIM)</td><td>REST API, token auth, runs in Docker Compose</td></tr>
+<tr><td>CML</td><td>Network simulator</td><td>Real Cisco OS, REST API, YAML topology, test before prod</td></tr>
+<tr><td>ansible-vault</td><td>Ansible secret encryption</td><td><code>ansible-vault create/edit/encrypt</code></td></tr>
+</tbody></table></div>
+</div></div>
+
+</main>
+</div>
+<script>
+function toggle(header) {
+  header.classList.toggle('open');
+  const body = header.nextElementSibling;
+  body.classList.toggle('open');
+}
+</script>
+</body>
+</html>
